@@ -1,8 +1,8 @@
-const Product = require("../models/Product");
+const Product = require("../models/productModel");
 const {
     createProductSchema,
     updateProductSchema
-} = require("../validations/productValidation");
+} = require("../controllers/validation/productValidation");
 
 const createProduct = async(req, res) => {
     try {
