@@ -1,8 +1,8 @@
 const Joi = require("joi");
 
-const oredrItemSchema = Joi.object({
+const orderItemSchema = Joi.object({
     product: Joi.required(),
-    quantity: Joi.number().required.min(1),
+    quantity: Joi.number().required().min(1),
     price: Joi.number().required().min(0)
 })
 
