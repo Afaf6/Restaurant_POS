@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+:root{
+    --background-color: #d1cccc;
+    --main-color: #FFF;
+    --primary-color: #FF6B00;
+    --iconG-color: #42e9b1;
+    --iconR-color: #f1a8a8;
+    --iconB-color: #98bbf0;
+    --neutral-color: #0F172A;
+}

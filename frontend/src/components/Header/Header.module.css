@@ -1,0 +1,35 @@
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.hamburge{ 
+    font-size: 22;
+    cursor: pointer; }
+
+.brand{ 
+    font-weight: 700;
+    font-size: 18;
+    color: #e67e22; }
+
+.avatar{ 
+    height: 32px;
+    width: 32px;
+    border-radius: 50%; 
+    background: #e67e22; 
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700; 
+    cursor: pointer;}

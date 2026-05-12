@@ -1,0 +1,19 @@
+.chart {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.chart button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #000000;
+}
+.chart button:hover {
+    background-color: #a1c5e2;
+    border-radius: 0.5cap;
+}

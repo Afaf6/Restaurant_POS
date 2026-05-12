@@ -1,0 +1,31 @@
+
+.dashSec {
+  display: flex;
+  gap: 24px; 
+  width: 100%;
+  align-items: stretch; 
+  margin-top: 24px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.outline {
+  background:var(--main-color);
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+
+.primary {
+  background:var(--primary-color);
+  border: none;
+  color: #fff;
+}
