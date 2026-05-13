@@ -21,6 +21,23 @@ const orderSchema = new mongoose.Schema({
     totalPrice: {
         type: Number,
         required: true
+    },
+    status: {
+        type:String,
+        enum: ["pending", "completed", "cancelled"],
+        default: "pending"
+    },
+    cashier: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Auth"
+    },
+    tableNumber: {
+        type: String,
+        default: null
+    },
+    customerName:{
+        type: String,
+        default: "Customer"
     }
 }, {timestamps: true});
 

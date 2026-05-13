@@ -18,8 +18,8 @@ const AuthSchema = new mongoose.Schema({
     },
     role: {
         type: String,
-        enum: ["Admin", "Cashier"],
-        default: "Cashier"
+        enum: ["admin", "cashier"],
+        default: "cashier"
     }
 })
 

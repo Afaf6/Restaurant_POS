@@ -13,7 +13,7 @@ const register = async (req, res) => {
             });
         };
 
-        const {userName, email, password} = req.body;
+        const {userName, email, password, role} = req.body;
 
         const existUser =  await Auth.findOne({email});
 
@@ -27,6 +27,7 @@ const register = async (req, res) => {
             userName,
             email,
             password : hashingPassword,
+            role: role || "cashier"
         });
 
         res.status(201).json({
@@ -84,6 +85,8 @@ const loginAuth = async(req, res) => {
         res.status(200).json({
             msg: "Login Success",
             token,
+            role: auth.role,
+            userName: auth.userName
         })
 
     } catch (error) {
