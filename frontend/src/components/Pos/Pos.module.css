@@ -1,0 +1,22 @@
+
+.posWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1; 
+  overflow-y: auto; 
+  background-color: #f7f7f7;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; 
+  font-size: 24px;
+  color: #888;
+}

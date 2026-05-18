@@ -1,0 +1,251 @@
+.container{
+ 
+    width: 80%;
+    margin: auto;
+} 
+
+.topSection {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom:24px;
+}
+
+.newBtn {
+    color:white;
+    background-color : var(--dark-orange);
+    border: none;
+    padding: 10px;
+    border-radius:10px;
+}
+
+.topCards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.statsCard {
+    background-color: var(--main-color);
+    border: solid 1px #f5d5be;
+    border-radius: 10px;
+    padding:  0.5rem 15rem 0.2rem 0.5rem;
+}
+
+.brown {
+    color: brown;
+    font-size: 30px;
+    font-weight:700;
+}
+
+.red {
+    color: rgb(185, 10, 10);
+    font-size: 30px;
+    font-weight:700;
+}
+
+.green {
+    color: green;
+    font-size: 30px;
+    font-weight:700;
+}
+
+.title {
+    font-weight: 400;
+    color:rgb(54, 13, 13);
+}
+
+.formOutline {
+    width:auto;
+    background-color: #dde8fa;
+    border: solid 1px #f5d5be;
+    border-radius: 10px;
+}
+
+.searchSection {
+    background-color: var(--main-color);
+    border: solid 1px #f5d5be;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 50px;
+    padding:30px;
+}
+
+.leftPart {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.lowStock {
+    padding:0.5rem 1rem;
+    border-radius:20px;
+    background-color:#f8e8dc;
+    border: none;
+    color:rgb(54, 13, 13);
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+    padding:0.5rem 1rem;
+    border-radius:20px;
+    background-color: #dde8fa;
+    border: none;
+}
+
+/* Layout for the Grid */
+ .productCards {
+     display: flex;
+     margin: 10px;
+     gap: 20px;
+     width: 100%;
+ }
+
+.item {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    width: 90%;
+}
+
+
+.lowStockBorder {
+    border: 1.5px solid #a82323;
+}
+
+.border {
+   border: 1.5px solid #f5d5be
+}
+
+.cardHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    position: relative;
+}
+
+.imgPlaceholder {
+    width: 60px;
+    height: 60px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+}
+
+.itemTitle h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+}
+
+.itemTitle p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.statusBadge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #a82323;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.healthy {
+     position: absolute;
+    top: 0;
+    right: 0;
+    background: #dde8fa;
+    color: rgb(54, 13, 13);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Middle Stock Section */
+.middleSection {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+}
+
+.label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.value span {
+    color: #107c41; /* Green color for the numbers */
+    font-size: 1.3rem;
+}
+
+/* Bottom Buttons */
+.bottomActions {
+    display: flex;
+    gap: 10px;
+}
+
+.editBtn, .restockBtn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: 0.2s;
+}
+
+.editBtn {
+    background: white;
+    color: #444;
+}
+
+.restockBtn {
+    background: #107c41; /* Dark Green */
+    color: white;
+    border: none;
+}
+
+/* Change restock button to red if stock is low */
+.lowStockBorder .restockBtn {
+    background: #a82323;
+}
+
+.formControl{
+    border: none;
+    width: 100%;
+}

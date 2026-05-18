@@ -1,0 +1,52 @@
+.activitySec {
+  background: #fff;
+  border-radius: 8px;
+  width: 100%;
+}   
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.background-g {
+  background:var(--iconG-color);
+ 
+}
+
+.background-r {
+    background:var(--iconR-color);
+}
+
+.background-b {
+    background:var(--iconB-color);
+}
+
+
+.text h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.text p {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+
+.money {
+  font-weight: 600;
+}
+
+.fontG {
+  color: #389e66;
+}
+
+.fontR {
+  color:  #e15454;
+}
