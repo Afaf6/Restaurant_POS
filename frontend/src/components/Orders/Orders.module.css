@@ -1,0 +1,573 @@
+.container {
+  padding: 30px;
+  padding-top: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 120px);
+  background-color: #fafafa;
+}
+
+/* Banner Styling */
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+  padding: 24px 30px;
+  border-radius: 20px;
+  color: white;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 30px rgba(230, 126, 34, 0.2);
+}
+
+.bannerContent h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.bannerContent p {
+  font-size: 15px;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 15px 25px;
+  border-radius: 14px;
+  min-width: 130px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.statVal {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.statLbl {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-top: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Control Bar Styling */
+.controlBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .controlBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.searchWrap {
+  position: relative;
+  flex-grow: 1;
+  max-width: 450px;
+}
+
+.searchWrap i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 15px;
+}
+
+.searchWrap input {
+  width: 100%;
+  padding: 12px 15px 12px 42px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  font-size: 14px;
+  background-color: white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.searchWrap input:focus {
+  border-color: #e67e22;
+  box-shadow: 0 4px 12px rgba(230, 126, 34, 0.12);
+}
+
+.filterWrap {
+  display: flex;
+  gap: 8px;
+  background-color: #eee;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.filterBtn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.filterBtn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.activeFilter {
+  background-color: white !important;
+  color: #111;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Spinner and Empty States */
+.centeredContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  color: #666;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #e67e22;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.emptyState {
+  background: white;
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  border: 1px dashed #ddd;
+  margin-top: 20px;
+}
+
+.emptyState i {
+  font-size: 48px;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.emptyState h3 {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  color: #333;
+}
+
+.emptyState p {
+  margin: 0;
+  color: #777;
+}
+
+.ordersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dateGroup {
+  background: transparent;
+}
+
+.dateHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e67e22;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(230, 126, 34, 0.2);
+  transition: background-color 0.2s;
+}
+
+.dateHeader:hover {
+  background-color: #d35400;
+}
+
+.dateHeader h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.dateStats {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+}
+
+/* Orders Grid */
+.ordersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.orderCard {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.orderCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  border-color: #ddd;
+}
+
+.cardHeader {
+  padding: 16px 20px;
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderId {
+  font-weight: 800;
+  color: #1a1a1a;
+  font-size: 15px;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #999;
+  margin-left: 10px;
+}
+
+.statusBadge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.statusBadge.pending { background-color: #fff8e1; color: #b78103; }
+.statusBadge.completed { background-color: #e8f5e9; color: #2e7d32; }
+.statusBadge.cancelled { background-color: #ffebee; color: #c62828; }
+.statusBadge.refunded { background-color: #f3e5f5; color: #7b1fa2; }
+
+.cardBody {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.cashierRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.itemSnippet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.snippetTag {
+  background-color: #f1f3f5;
+  color: #495057;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.moreItems {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.cardFooter {
+  padding: 16px 20px;
+  border-top: 1px solid #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fcfcfc;
+}
+
+.totalPrice {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.completeBtn, .cancelBtn, .receiptBtn, .refundBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.completeBtn { background-color: #e8f5e9; color: #2e7d32; }
+.completeBtn:hover { background-color: #c8e6c9; transform: scale(1.05); }
+
+.cancelBtn { background-color: #ffebee; color: #c62828; }
+.cancelBtn:hover { background-color: #ffcdd2; transform: scale(1.05); }
+
+.refundBtn { background-color: #f3e5f5; color: #7b1fa2; }
+.refundBtn:hover { background-color: #e1bee7; transform: scale(1.05); }
+
+.receiptBtn { background-color: #f1f3f5; color: #495057; }
+.receiptBtn:hover { background-color: #e9ecef; transform: scale(1.05); }
+
+/* RECEIPT MODAL STYLING */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modalContent {
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.25s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.closeModal {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #aaa;
+  z-index: 10;
+  transition: color 0.2s;
+}
+
+.closeModal:hover { color: #333; }
+
+/* The Receipt Page Styling */
+.receiptPaper {
+  padding: 35px 30px 25px 30px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #111;
+}
+
+.receiptHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.receiptHeader h3 {
+  margin: 0 0 5px 0;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.receiptHeader p {
+  margin: 0 0 15px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.receiptHeader h4 {
+  margin: 15px 0;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.receiptMeta {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 13px;
+  gap: 4px;
+}
+
+.divider {
+  border-top: 1px dashed #888;
+  margin: 15px 0;
+}
+
+.receiptTable {
+  width: 100%;
+  font-size: 13px;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.receiptTable th {
+  font-weight: 700;
+  padding-bottom: 8px;
+  text-align: left;
+  border-bottom: 1px solid #888;
+}
+
+.receiptTable td {
+  padding: 6px 0;
+}
+
+.receiptTotals {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grandTotal {
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: 10px;
+  border-top: 1px solid #111;
+  padding-top: 10px;
+}
+
+.receiptFooter {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 12px;
+}
+
+.receiptFooter p { margin: 0; }
+
+.statusText {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.statusText.pending { color: #b78103; }
+.statusText.completed { color: #2e7d32; }
+.statusText.cancelled { color: #c62828; }
+.statusText.refunded { color: #7b1fa2; }
+
+/* Modal Action Area */
+.modalActions {
+  padding: 20px 30px;
+  background-color: #fafafa;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modalPrintBtn {
+  width: 100%;
+  padding: 12px;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.modalPrintBtn:hover { background-color: #d35400; }
+
+.modalAdminActions {
+  display: flex;
+  gap: 10px;
+}
+
+.modalCompleteBtn, .modalCancelBtn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.modalCompleteBtn { background-color: #4caf50; color: white; }
+.modalCompleteBtn:hover { opacity: 0.9; }
+
+.modalCancelBtn { background-color: #f44336; color: white; }
+.modalCancelBtn:hover { opacity: 0.9; }

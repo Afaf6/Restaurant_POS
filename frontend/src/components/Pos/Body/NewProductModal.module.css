@@ -1,0 +1,224 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modalContent {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  animation: slideUp 0.25s ease;
+  overflow: hidden;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(24px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #f0f0f0;
+  flex-shrink: 0;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.closeBtn {
+  background: #f4f4f4;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #666;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.closeBtn:hover {
+  background: #ebebeb;
+  transform: rotate(90deg);
+}
+
+form {
+  padding: 20px 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.gridRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #e4e4e4;
+  outline: none;
+  font-size: 14px;
+  color: #222;
+  background: #fafafa;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #e67e22;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+}
+
+/* Ingredients section */
+.ingredientsBox {
+  background: #fafafa;
+  border: 1.5px solid #efefef;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ingredientRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.ingredientSelect {
+  flex: 2;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #e4e4e4;
+  outline: none;
+  font-size: 13px;
+  background: #fff;
+  color: #222;
+  transition: border-color 0.2s;
+}
+
+.ingredientSelect:focus {
+  border-color: #e67e22;
+}
+
+.ingredientQty {
+  flex: 0 0 72px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1.5px solid #e4e4e4;
+  outline: none;
+  font-size: 13px;
+  background: #fff;
+  color: #222;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.ingredientQty:focus {
+  border-color: #e67e22;
+}
+
+.removeBtn {
+  background: #fff0f0;
+  color: #e03131;
+  border: 1.5px solid #ffc9c9;
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 13px;
+}
+
+.removeBtn:hover {
+  background: #ffe3e3;
+}
+
+.addIngredientBtn {
+  background: transparent;
+  color: #e67e22;
+  border: 1.5px dashed #f0a050;
+  border-radius: 8px;
+  padding: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.addIngredientBtn:hover {
+  background: #fff8f0;
+}
+
+.submitBtn {
+  background: #e67e22;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  flex-shrink: 0;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #d35400;
+  transform: translateY(-1px);
+}
+
+.submitBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

@@ -1,0 +1,36 @@
+
+.expCart {
+  background: #fff;
+  border-radius: 12px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.backicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 25px;
+  border-radius: 5px;
+
+}
+.title {
+  font-size: 18px;
+  color: var(--neutral-color);
+  font-weight: 400;
+}
+
+.revenue .backicon {
+  
+  background-color: var(--iconG-color);
+}
+
+.expenses .backicon {
+  
+  background-color: var(--iconR-color);
+}
+
+.profit .backicon {
+  background-color:var(--iconB-color);
+}

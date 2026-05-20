@@ -1,0 +1,43 @@
+
+.dashboard {
+  padding: 16px;
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+.dashSec {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  align-items: stretch;
+  margin-top: 16px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.outline {
+  background:var(--main-color);
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+
+.primary {
+  background: var(--primary-color);
+  border: none;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.primary:hover {
+  background: var(--primary-hover);
+}
